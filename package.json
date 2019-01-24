@@ -1,0 +1,25 @@
+{
+  "name": "ussd-server-with-express-graphql-and-firestore",
+  "version": "1.0.0",
+  "description": "A USSD Server built with express-grapgQL and firestore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GraphQL",
+    "USSD",
+    "firestore"
+  ],
+  "author": "Osborne Saka",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "firebase": "^5.8.1",
+    "graphql": "^14.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
