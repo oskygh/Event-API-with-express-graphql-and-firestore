@@ -1,10 +1,9 @@
-// Depencies
-const firebase = require('./config/firebase')
+// Import files
+
 const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const schema = require('./schema/schema')
-
-const root = { hello: () => 'Hello world!' }
+const root = require('./resolvers/root')
 
 const app = express()
 
