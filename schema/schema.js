@@ -1,8 +1,6 @@
-const { buildSchema } = require('graphql')
-
 const schema = buildSchema(`
 type Query {
-  getTeams : [team]
+  getEvents : [Events!]!
 }
 type Mutation {
   initiate(
@@ -14,23 +12,27 @@ type Mutation {
     clientState : String
     type: String
   ) : [String]
+
+  createEvent ( event:eventInput) : Event!
   
-  vote (
-    sequence: Int
-    phoneNumber : String
-    sessionId : String
-    serviceCode : String
-    operator : String
-    message : String
-    type: String
-  ) : [String]
+
 }
-type team {
-  _id: String
-  number: Int
-  votes: Int
+type Events {
+  _id: ID!
+  title: String!
+  description : String!
+  fee : Float!
+  location : String!
   
 }
+
+input eventInput {
+  title : String!
+  description : String!
+  fee : Float!
+  location : String!
+}
+
 `)
 
 module.exports = schema
